@@ -4,14 +4,14 @@ from .models import *
 class TransactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Transaction
-        fields = ['id', 'date', 'amount', 'payer', 'owers', 'description']
+        fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'name', 'email', 'trips']
+        fields = '__all__'
 
 class TripSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trip
-        fields = ['id', 'users', 'transactions']
+        fields = '__all__'
